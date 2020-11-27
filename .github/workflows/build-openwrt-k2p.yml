@@ -11,8 +11,8 @@
 name: Build OpenWrt-k2p
 
 on:
-  watch:
-    types: started
+#   watch:
+#     types: started
   repository_dispatch:
   workflow_dispatch:
     inputs:
@@ -40,7 +40,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
